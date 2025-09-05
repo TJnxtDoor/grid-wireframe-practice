@@ -1,106 +1,90 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #ccc;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ccc;
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  width: 95%;
-  max-width: 500px;
-  background-color: #888;
-  padding: 10px;
-  box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 95%;
+    max-width: 500px;
+    background-color: #888;
+    padding: 10px;
+    box-sizing: border-box;
+    /* Define grid areas for the mobile layout */
+    grid-template-areas:
+        "header"
+        "main"
+        "aside-top"
+        "aside-bottom"
+        "footer";
 }
 
 .grid-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .header {
-  background-color: #a0408d;
-}
-
-.aside-top {
-  background-color: #2e78c0;
+    background-color: #a0408d;
+    grid-area: header;
 }
 
 .main-content {
-  background-color: #64bc64;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  padding: 10px;
-  border-radius: 5px;
+    background-color: #64bc64;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    grid-area: main;
 }
 
 .column {
-  background-color: #e62c64;
-  padding: 15px;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: #e62c64;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.aside-top {
+    background-color: #2e78c0;
+    grid-area: aside-top;
 }
 
 .aside-bottom {
-  background-color: #2eafc0;
+    background-color: #2eafc0;
+    grid-area: aside-bottom;
 }
 
 .footer {
-  background-color: #f78d2b;
+    background-color: #f78d2b;
+    grid-area: footer;
 }
 
 @media (min-width: 769px) {
-    .container {
-        width: 100%;
+    .grid-container {
         max-width: 960px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    header,
-    .articles,
-    aside,
-    footer {
-        width: 100%;
-    }
-    
-    header {
-        width: 30%;
-    }
-    
-    .articles {
-        width: 68%;
-    }
-    
-    aside {
-        order: 1;
-        width: 30%;
-    }
-    
-    .articles {
-        order: 2;
-    }
-    
-    footer {
-        order: 3;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* Define the new grid areas for the desktop layout */
+        grid-template-areas:
+            "header header header"
+            "aside-top main main"
+            "aside-bottom main main"
+            "footer footer footer";
     }
 }
