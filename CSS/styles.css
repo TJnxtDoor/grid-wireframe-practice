@@ -79,7 +79,7 @@ body {
 @media (min-width: 769px) {
     .grid-container {
         max-width: 960px;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
         /* Define the new grid areas for the desktop layout */
         grid-template-areas:
             "header header header"
