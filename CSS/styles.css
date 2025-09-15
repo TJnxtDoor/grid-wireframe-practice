@@ -17,11 +17,17 @@ body {
     background-color: #888;
     padding: 10px;
     box-sizing: border-box;
-    /* Define grid areas for the mobile layout */
+    grid-template-areas:
+        "header header header"
+            "aside-top main main"
+            "aside-bottom main main"
+            "footer footer footer";
+}
+.grid-container {
     grid-template-areas:
         "header"
-        "main"
         "aside-top"
+        "main"
         "aside-bottom"
         "footer";
 }
