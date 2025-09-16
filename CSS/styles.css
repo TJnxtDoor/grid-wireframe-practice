@@ -69,13 +69,15 @@ body {
 
 @media (min-width: 769px) {
     .grid-container {
-        display: grid;
-        max-width: 960px;
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas:
             "header header header"
             "aside-top main main"
             "aside-bottom main main"
             "footer footer footer";
+    }
+
+    .main-content {
+        grid-template-columns: 1fr 1fr; 
     }
 }
