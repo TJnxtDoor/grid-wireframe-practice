@@ -18,26 +18,11 @@ body {
     padding: 10px;
     box-sizing: border-box;
     grid-template-areas:
-        "header header header"
-            "aside-top main main"
-            "aside-bottom main main"
-            "footer footer footer";
-}
-.grid-container {
-    grid-template-areas:
         "header"
         "aside-top"
         "main"
         "aside-bottom"
         "footer";
-}
-
-.grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    color: white;
     font-weight: bold;
     border-radius: 5px;
     text-align: center;
