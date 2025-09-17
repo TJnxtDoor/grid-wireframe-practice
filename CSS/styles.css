@@ -85,10 +85,10 @@ inside-grid {
 
 
 .Article {
-        display: none;
-    }
+    display: none;
+}
 
-@media (min-width: 769px) { 
+@media (min-width: 769px) {
     .wrap {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -96,7 +96,7 @@ inside-grid {
         gap: 10px;
     }
 
-    .Article{
+    .Article {
         display: block;
         position: relative;
         top: 150px;
@@ -114,6 +114,7 @@ inside-grid {
             "side aside aside";
         grid-column: 1 / 4;
     }
+
     .column {
         display: grid;
         grid-template-columns: 1fr;
